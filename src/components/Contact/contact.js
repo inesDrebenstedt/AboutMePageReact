@@ -32,10 +32,6 @@ const refForm = useRef();
 
     e.preventDefault();
 
-    console.log('======================> ' + process.env.REACT_APP_EMAILJS_SERVICE_KEY);
-
-    //TODO ines: replace with values from .env
-
     emailjs
       .sendForm(process.env.REACT_APP_EMAILJS_SERVICE_KEY, process.env.REACT_APP_EMAILJS_TEMPLATE_NAME, refForm.current, {
         publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
